@@ -1,105 +1,138 @@
-
+/* Reset some default styles and apply a global font */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  box-sizing: border-box; /* Ensures padding & borders are included in width/height */
+  font-family: sans-serif; /* Apply a clean font everywhere */
 }
 
+/* Center the calculator in the middle of the screen */
 .app {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  height: 100vh;            /* Full screen height */
 }
 
+/* Calculator container */
 .calculator {
-  background-color: #22252D;
+  background-color: #22252D; /* Dark background */
   width: 100%;
-  max-width: 370px;
-  min-height: 640px;
+  max-width: 370px;          /* Limit calculator width */
+  min-height: 640px; /* optional for large screens */
   display: flex;
-  flex-direction: column;
-  border-radius: 1.5rem;
-  overflow: hidden;
+  flex-direction: column;    /* Stack display and keys vertically */
+  border-radius: 1.5rem;     /* Rounded corners */
+  overflow: hidden;          /* Clip overflowing child content */
 }
 
+/* Display section (shows input and output) */
 .display {
-  min-height: 200px;
+  min-height: 200px;        /* Tall enough to show both input & result */
   padding: 1.5rem;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: flex-end; /* Align text to the right */
+  align-items: flex-end;     /* Align at bottom */
   color: white;
   text-align: right;
-  flex: 1 1 0%;
+  flex: 1 1 0%;              /* Allow flexible growth/shrink */
 }
 
+/* Smaller text for input expression */
 .display .input {
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;    /* Space between input and output */
 }
 
+/* Bigger, bold text for output result */
 .display .output {
   font-size: 3rem;
   font-weight: 700;
   width: 100%;
   max-width: 100%;
-  overflow: auto;
+  overflow: auto;           /* Allow scrolling if text is too long */
 }
 
+/* Operators styled in red */
 .display .operator {
   color: #EB6666;
 }
 
+/* Brackets and percent styled in teal */
 .display .brackets,
 .display .percent {
   color: #26FED7;
 }
 
+/* Keys container */
 .keys {
   background-color: #292D36;
   padding: 1.5rem;
-  border-radius: 1.5rem 1.5rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-gap: 1rem;
-  box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem 1.5rem 0 0; /* Rounded only at the top */
+  display: grid;                     /* Use CSS grid for layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(5, 1fr);    /* 5 equal rows */
+  grid-gap: 1rem;                       /* Space between keys */
+  box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2); /* Soft shadow at top */
 }
 
+/* Style for each key */
 .keys .key {
   position: relative;
-  cursor: pointer;
+  cursor: pointer;            /* Pointer cursor on hover */
   display: block;
   height: 0;
-  padding-top: 100%;
-  background-color: #262933;
-  border-radius: 1rem;
-  transition: 0.2s;
-  user-select: none;
+  padding-top: 100%;          /* Makes keys perfect squares */
+  background-color: #262933;  /* Dark button background */
+  border-radius: 1rem;        /* Rounded corners */
+  transition: 0.2s;           /* Smooth hover animation */
+  user-select: none;          /* Prevent text selection on click */
 }
 
+/* Text inside keys (centered absolutely) */
 .keys .key span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -50%); /* Center text */
   font-size: 2rem;
   font-weight: 700;
-  color: #FFFFFF
+  color: #FFFFFF;                    /* White text by default */
 }
 
+/* Key hover effect */
 .keys .key:hover {
-  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2); /* Inner glow effect */
 }
 
+/* Operator keys (like + - × ÷) colored red */
 .keys .key.operator span {
   color: #EB6666;
 }
 
+/* Action keys (like clear, backspace, etc.) colored teal */
 .keys .key.action span {
   color: #26FED7;
+}
+
+/* Media Queries for small screens */
+@media (max-height: 700px) {
+  .calculator {
+    height: 85vh;
+  }
+}
+
+@media (max-height: 500px) {
+  .calculator {
+    height: 95vh;
+  }
+
+  .keys .key span {
+    font-size: 1.4rem; /* shrink font so buttons fit */
+  }
+
+  .display .output {
+    font-size: 2rem; /* shrink output font */
+  }
 }
 
